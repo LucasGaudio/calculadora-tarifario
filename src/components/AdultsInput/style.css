@@ -1,0 +1,18 @@
+.adults-input-wrapper {
+  width: 100%;
+}
+
+.adults-input {
+  width: 100%;
+  border-radius: var(--border-radius-lg);
+  padding: 14px var(--spacing-xs);
+  font-size: var(--font-size-base);
+  border: 1px solid #dfe3e6;
+  background: #f8faf8;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.adults-input:focus {
+  border-color: var(--primary-color);
+}

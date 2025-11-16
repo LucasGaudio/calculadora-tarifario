@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+.reservation-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-area {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculate-button {
+  margin-top: var(--spacing-md);
+  width: 100%;
+  padding: 14px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculate-button:hover {
+  background: #917bb7;
+  transform: translateY(-1px);
+}
+
+.calculate-button:active {
+  transform: translateY(0);
+}
+
+.date-display {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
+  background: rgba(118, 90, 166, 0.05);
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(118, 90, 166, 0.1);
+}
+
+.date-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: var(--spacing-xs);
+  flex: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.date-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.date-value {
+  font-size: var(--font-size-lg);
+  color: var(--primary-color);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reservation-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
   }
 }

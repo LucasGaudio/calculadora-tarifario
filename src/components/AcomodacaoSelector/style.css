@@ -1,0 +1,26 @@
+.acm-container {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.acm-btn {
+  flex: 1;
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-md);
+  background: #f3f3f3;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  transition: all var(--transition-fast);
+}
+
+.acm-btn:hover {
+  background: #e8e8e8;
+}
+
+.acm-btn.selected {
+  background: #917bb7;
+  font-weight: var(--font-weight-semibold);
+  color: #fff;
+  transform: scale(1.02);
+}

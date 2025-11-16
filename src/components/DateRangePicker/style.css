@@ -1,0 +1,47 @@
+.rdp-root {
+  --rdp-accent-color: var(--primary-color);
+}
+
+.drp-calendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drp-calendar .rdp-day {
+  border-radius: 25px;
+  padding: 8px 10px;
+  transition: all var(--transition-fast);
+}
+
+.rdp-range-start,
+.rdp-range-end {
+  background: var(--primary-color);
+}
+
+.rdp-day.rd-weekend {
+  background: rgba(14, 166, 14, 0.06);
+}
+
+.drp-calendar .rdp-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.drp-calendar .rdp-weekday {
+  color: var(--primary-color);
+  font-weight: var(--font-weight-semibold);
+}
+
+.rdp-selected {
+  color: #fff !important;
+}
+
+/* Responsive */
+@media (min-width: 900px) {
+  .drp-wrapper {
+    flex-direction: column;
+  }
+}
